@@ -1,16 +1,18 @@
 import Image from "next/image";
-import { FaBuilding, FaTools, FaUsers } from "react-icons/fa";
+import { FaBuilding, FaTools, FaUsers} from "react-icons/fa";
 import { Footer } from "./components/footer";
 import { Aside } from "./components/aside";
 import { Card } from "./components/card";
+import TableComponent from "./components/table";
+import { IoCheckmarkDone } from "react-icons/io5";
 
 export default function Home() {
 
   const cards = [
-    {color: "bg-orange-200", qty:"200", text: "Ambientes", icon:<FaBuilding size={48} />},
-    {color: "bg-blue-200", qty:"200", text: "Ambientes", icon:<FaBuilding size={48} />},
-    {color: "bg-red-200", qty:"200", text: "Ambientes", icon:<FaBuilding size={48} />},
-    {color: "bg-green-200", qty:"200", text: "Ambientes", icon:<FaBuilding size={48} />},
+    {color: "bg-orange-200", qty:"20", text: "Ambientes", icon:<FaBuilding size={48} />},
+    {color: "bg-blue-200", qty:"400", text: "Equipamentos", icon:<FaTools size={48} />},
+    {color: "bg-red-200", qty:"150", text: "Chamados Produtos", icon:<FaUsers size={48} />},
+    {color: "bg-green-200", qty:"10", text: "Chamados Concluidos", icon:<IoCheckmarkDone size={48} />},
   ]
 
 
@@ -33,6 +35,8 @@ export default function Home() {
               ))}
               </div>
             </div>
+
+            <TableComponent />
         </main>
       </div>
       <Footer/>
